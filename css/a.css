@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --main-color: #c72092;
+    --second-color: #6c14d0;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f3f3;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: linear-gradient(to bottom, var(--main-color), var(--second-color));
+  }
+  
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(#200016, #7d00f1);
+    height: 100vh;
+  }
+  
+  /* ------ Navbar ------- */
+  header {
+    position: absolute;
+    width: 95%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar .navbar-brand {
+    color: var(--main-color);
+    letter-spacing: 1px;
+  }
+  
+  .navbar .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar .navbar-brand span {
+    color: var(--second-color);
+    text-decoration: underline 3px;
+  }
+  
+  .navbar .nav-link {
+    font-size: 18px;
+    position: relative;
+  }
+  
+  .navbar .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 0;
+    border-radius: 3px;
+    background-color: var(--second-color);
+    transition: 0.5s;
+  }
+  
+  .navbar .nav-link:hover::before,
+  .navbar .nav-link.active::before {
+    width: 100%;
+  }
+  
+  .navbar .nav-link.active {
+    color: var(--main-color) !important;
+  }
+  
+  .navbar .user a {
+    font-size: 25px;
+    color: var(--main-color);
+    transition: 0.5s;
+    padding: 16px;
+  }
+  
+  .navbar .user a:hover {
+    color: var(--second-color);
+  }
+  /* nav */
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, #200016, transparent);
+}
+.main img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+#moon {
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+.nouvil{
+    color: #fff;
+    font-size: 25px;
+    transform: translateY(-150px);
+}
+.content {
+    color: #fff;
+    padding: 30px;
+}
+.content h2{
+    margin: 20px;
+    font-size: 30px;
+}
+.content p {
+    margin: 20px;
+}
